@@ -6,6 +6,16 @@ import TestRoutes from './pages/TestRoutes';
 import WelcomePage from './pages/WelcomePage';
 import { FormProvider } from './context/FormContext';
 
+// Simple debug component
+const DebugPage = () => {
+  return (
+    <div style={{ padding: '20px', fontFamily: 'Arial' }}>
+      <h1>Debug Page</h1>
+      <p>If you can see this, basic React rendering is working!</p>
+    </div>
+  );
+};
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +25,7 @@ function App() {
           <Route path="/onboarding" element={<OnboardingLayout />} />
           <Route path="/completion" element={<CompletionPage />} />
           <Route path="/test" element={<TestRoutes />} />
+          <Route path="/debug" element={<DebugPage />} />
         </Routes>
       </FormProvider>
     </BrowserRouter>
